@@ -27,13 +27,26 @@
     sent by the server. Not so in this case.
     <p/>
     With SPA we need to rethink this consept. Now the client holds the logic and it is the client that makes contact 
-    with servers and repos - and there can be more than one server and repo.
+    with servers and repos - and, yes, there can be more than one server and repo.
     <p/>
-    With SPA there is one issue with search engines. Search engines do not look into your JavaScript generated application.
+    The SPA relates so heavily on JavaScript that almost everything is JavaScript based. Serverside-rendering? JavaScript.
+    Css? JavaScript. Presenting a new page? Build with JavaScript. And tools? coded in JacaScript.
+    <p/>
+    There is one issue to be aware of. Search engines do not look into your JavaScript generated application.
     They will not find what is embedded in your page. If this is what you want - make a SPA. But if you have information 
     that should be searchable - use a traditional solution. We are setting for a SPA.
     
     <h3>Developing a Single Page Application</h3>
+    JavaScript is typeless and a script-languag, making it easy to create unstrutured code - which we do not want -
+    espesially as our application grows. Operations on the DOM are not that self-explaining, causing errors and debugging 
+    in JavaScript can be hard without support. 
+    <p/>
+    Therefore lots of tools are developed.
+    
+    <h3>The developing environment</h3>
+    
+    
+    
     
   </body>
 </html>

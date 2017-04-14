@@ -42,29 +42,48 @@
     Should you know javaScript in advance? yes - certainly. It will help to see the bigger picture when working in details, 
     and it will help understanding why things are done in certain ways. 
     <p/>
-    There is one issue to be aware of. Search engines do not look into your JavaScript generated application.
-    They will not find what is embedded in your page. If this is what you want - make a SPA. But if you have information 
-    that should be searchable - use a traditional solution. We are setting for a SPA.
+    There is one issue that might have come to your mind. What with links to pages? What if you want to let others reference 
+    certain places in your app? React takes care of this. To others your one time downloaded, single page app will 
+    stand forth as a traditional webapplication.
     
     <h3>Developing a Single Page Application</h3>
-    JavaScript is typeless and a script-languag, making it easy to create unstrutured code - which we do not want -
+    JavaScript is typeless and a script-language, making it easy to create unstrutured code - which we do not want -
     espesially as our application grows. Operations on the DOM are not that self-explaining, causing errors and debugging 
     in JavaScript can be hard without support. 
     <p/>
     Therefore lots of tools are developed.
     
     <h3>SPA with React - The simplest way</h3>
-    The simplest page is a page that loads the React library and then run some React code. 
+    The simplest page is a page that loads the React library, defines a React component and then exposes th component. 
     I will support an example page later.
-    This is the start of development with React. But others have been down that same road, broaden it. 
-    Now there highways that increases the speed of development. And they share their works. Both tools and code are 
-    there for you to reuse. 
+    This is the start of development with React. 
+    
+    But others have been down that same road, broaden it. And they share their works. Both tools and code are there 
+    for you to reuse. Now there are highways increasing the speed of development. 
     
     <h3>On down the road</h3>
-    What we need first of all when developing webaps is a webserver. Named Node. Well it does more than serve requests.
-    But it serves your needs. 
+    What we need first of all is a webserver to run our tests and develop against. Then we would like to have tools 
+    and access to libraries with ready_made code. And - of cause we need the environment where to develop.
+    
+    <h3>Node.js - our webserver </h3>
+    Node.js is a lightweight and efficient piece of code, serving our development needs. It shows our JavaScript code in a
+    browser. That is probably all we need to know by now, but one could notice that the effiency stems from the fact it 
+    runs in a single thread - and is non-blocking. This behavior is achieved by actively dispatching tasks - and having 
+    the tasks use callbacks when finished. The callbacks are collected in a queue and are then treated in order.
+    
+    <h3>Node Package manager (NPM) - access to a repository with tons of ready made code</h3>
+    Code are shared - some half a million pices of code are shared. NPM takes your list of dependencies, which is written 
+    in the package.json-file, downloads those files and store them in the 'NodeJS'-folder under 'node_modules'. 
+    Then your code can import from this local library of javaScript-files.
     <p/>
-    But more than that we need a.. NMP ... (more to come)
+    What the packages.jason-file looks like? Mainly a list of dependencies with version number. In the format of a JavaScript
+    key-value list. Example to be provided later.
+    <p/>
+    Now we have the server and the tool to download tools and code. 
+    
+    Whats next?
+    
+    ... and more to come
     
 
 

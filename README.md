@@ -1,2 +1,2 @@
 # warild.github.io
-On building single page applications and React
+On building applications with React

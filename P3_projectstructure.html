@@ -35,9 +35,23 @@
 	<p/>
 	This predecision is the (minor) drawback of this approach. Single command is the (mayor) benefit.
 	<p/>
+	Filestructure will be like this: <br/>
+	In /public/ goes everything that should be publicly exposed by the webserver. <br/>
+	In /src/ goes all other code that resembles the application. Subfolders might hold the individual pages.
+	<p/>
 	
 	<b>The on your own approach</b><br/>
 	This approach gives you the freedom to chose structure yourself. And change it underways as you reaches new insights.
+	<p/>
+	It seems a structure like this might scale well:<br/>
+	/index.htm<br/>
+	/components (library of pieces to create pages from)<br/>
+	/pages<br/>
+	  /Home (containing .jsx, .css, .js, ect -files resembling the Home-page)<br/>
+	  /AboutUs (containing .jsx, .css, .js, etc -files resembling the AboutUs-page)<br/>
+	  index.js<br/>
+	<p/>
+	.. necessary steps might be added later. 
 	
 </body>
 </html>

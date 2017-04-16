@@ -37,7 +37,10 @@
     with servers and repos - and, yes, there can be more than one server and repo.
     <p/>
     The SPA relates so heavily on JavaScript that almost everything is JavaScript based. Serverside-rendering? JavaScript.
-    Css? JavaScript. Presenting a new page? JavaScript. And tools? coded in JacaScript.
+    Css? JavaScript. Presenting a new page? JavaScript. And tools? coded in JacaScript. Why all JavaScript? 
+    <p/>
+    With javascript an additional layer is put above the traditional code. This extra layer gives flexibility and 
+    possibilities and simplifies coding. You can do well without React and its friends, but you will do better with them.
     <p/>
     Should you know javaScript in advance? yes - certainly. It will help to see the bigger picture when working in details, 
     and it will help understanding why things are done in certain ways. 
@@ -73,7 +76,7 @@
     
     <h3>Node Package manager (NPM) - access to a repository with tons of ready made code</h3>
     Code are shared - some half a million pices of code are shared. NPM takes your list of dependencies, which is written 
-    in the package.json-file, downloads those files and store them in the 'NodeJS'-folder under 'node_modules'. 
+    in the package.json-file, downloads those files and store them in the 'node_modules' folder. 
     Then your code can import from this local library of javaScript-files.
     <p/>
     What the packages.jason-file looks like? Mainly a list of dependencies with version number - in the format of a JavaScript
@@ -88,8 +91,8 @@
     Atom is a good starting point for frontend developing with React.
     
     <h3>Development and debugging - Chrome with plugins</h3>
-    Atom might be good for writing the code, but to visualise the code we need the browser. And in the browser dreams get 
-    distinguished from reality. Or more commonly spoken - it is in the browser we see errors. Chrome has plugins that is
+    Atom might be good for writing the code, but to visualise the code we need a browser. And in the browser dreams get 
+    distinguished from reality. Or more precisely spoken - it is in the browser we see errors. Chrome has plugins that is
     nice to use for this task.
     
     <h3>Webpack - packing all codepieces together into one SPA</h3>
@@ -98,23 +101,8 @@
     
     <p/> 
     --- And this ends the first read through ---
-    <p/>
-    <h3>Unveiling relationships - React, Redux and Less</h3>
-    Less first. Less is CSS with the addition of variables, functions and others, adding a layer above CSS, 
-    simplifying and clarifying the CSS-code. 
-    Redux takes care of state when an event occurs, ensuring consistency of data within the app.
-    <p/>
-    The MVC world is related to the 3 layer structure in the following way: The Model relates to the datacontent 
-    of the webpage, the View relates to the CSS and the Controller relates to JavaScript. What is not mentioned, 
-    but completes the picture is that there is a relation between structure and the html-code. 
     <p/> 
-    This brings us to the transformation of the consepts into the React world. The Model and data relates to Redux 
-    (changing of state). The View and CSS relate to Less. This could be taken further into Materialized design and 
-    responsible design, but not for now. Controller and JavaScript relates 
-    to JavaScript. And finally React relates to the structure and html. 
-    <p/> 
-    With these distinctions it might get easier to work in the new world - it is not that new - the elements are the same,
-    just having new names and are positioned differently - more browser orientet, and expressed i JavaScript.
+    Next step will be to <a href="Page2"> set up an environment </a>
     
     <h3>Up running - getting an environment</h3>
     The next sections are about installing Node, NPM, Atom and Chrome plugins and getting to a position where we are ready to
@@ -132,6 +120,22 @@
     <p/> 
     Thats it!
     
+    <h3>Unveiling relationships - React, Redux and Less</h3>
+    Less first. Less is CSS with the addition of variables, functions and others, adding a layer above CSS, 
+    simplifying and clarifying the CSS-code. 
+    Redux takes care of state when an event occurs, ensuring consistency of data within the app.
+    <p/>
+    The MVC world is related to the 3 layer structure in the following way: The Model relates to the datacontent 
+    of the webpage, the View relates to the CSS and the Controller relates to JavaScript. What is not mentioned, 
+    but completes the picture is that there is a relation between structure and the html-code. 
+    <p/> 
+    This brings us to the transformation of the consepts into the React world. The Model and data relates to Redux 
+    (changing of state). The View and CSS relate to Less. This could be taken further into Materialized design and 
+    responsible design, but not for now. Controller and JavaScript relates 
+    to JavaScript. And finally React relates to the structure and html. 
+    <p/> 
+    With these distinctions it might get easier to work in the new world - it is not that new - the elements are the same,
+    just having new names and are positioned differently - more browser orientet, and expressed i JavaScript.
     <h3>Modules - tying files together</h3>
     
     

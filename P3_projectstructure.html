@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<h3>Projectstructure</h3>
-  
-      
-        <h3>Unveiling relationships - React, JSX, Redux, Router and Less </h3>
-    Less first. Less is CSS with the addition of variables, functions and others, adding a layer above CSS, 
-    simplifying and clarifying the CSS-code. 
-    Redux takes care of state when an event occurs, ensuring consistency of data within the app.
-    <p/>
-    The MVC world is related to the 3 layer structure in the following way: The Model relates to the datacontent 
-    of the webpage, the View relates to the CSS and the Controller relates to JavaScript. What is not mentioned, 
-    but completes the picture is that there is a relation between structure and the html-code. 
-    <p/> 
-    This brings us to the transformation of the consepts into the React world. The Model and data relates to Redux 
-    (changing of state). The View and CSS relate to Less. This could be taken further into Materialized design and 
-    responsible design, but not for now. Controller and JavaScript relates 
-    to JavaScript. And finally React relates to the structure and html. 
-    <p/> 
-    With these distinctions it might get easier to work in the new world - it is not that new - the elements are the same,
-    just having new names and are positioned differently - more browser orientet, and expressed i JavaScript.
-    <h3>Modules - tying files together</h3>
-  
+<body><h3>Structure of the project</h3>
+	What about the folderstructure in react-projects? Some structure is needed, but no structure is predefined.
+	<p/>
+	<b>The single page approach</b>
+	We started by showing that it all could go into one single html-file.
+	Done this way the browser traverses the file and finds instructions to fetch the React-library from a Facebook location. 
+	Then the React-code in the html is transformed into JavaScript that is understandable to the browser. Finally the browser 
+	renders this transformed code and the page is shown to the user. 
+	<p/>
+	This is too easy. And gets too complicated when the app grows.
+	<p/>
+	<b>The template approach</b>
+	Someone has been down this road before, making the 'create-react-app' package. By running this a readymade startup 
+	project is created. And you just continue your work based on this. How to install and run?
+	<p/>
+	Download: <br/>
+	<i>npm install -g create-react-app</i>
+	<p/>
+	Create project. <br/>
+	Go to the folder where you want the folder of the project created, and then issue this command (with the name of the new project):<br/>
+	<i>create-react-app Name_of_the_new_project </i>
+	<p/>
+	Start the Node-webserver <br/>
+	Go into the folder with the new project, and the issue the command to start the server:<br/>
+	<i>npm start</i>
+	<p/>
+	The template web-page should now show in the browser.
+	<p/>
+	But there at things of importance to notice: With this approach the index.html must always exist, and it must always 
+	be placed in the 'public' -folder. The file 'index.js' must also exist, and it must always be placed in the 'src'-folder. 
+	This is because the system uses this index.html to start the app and always inspects this index.js for the content 
+	of the app. 
+	<p/>
+	This predecision is the (minor) drawback of this approach. Single command is the (mayor) benefit.
+	<p/>
+	
+	<b>The on your own approach</b>
+	This approach gives you the freedom to chose structure yourself. And change it underways as you reaches new insights.
+	
 </body>
 </html>

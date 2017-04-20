@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>Learning React - a journey</h1>
-    <div>At start I thoutht it would be straight easy. Just buy a book and read along. But no.
+#Learning React - a journey
+    At start I thoutht it would be straight easy. Just buy a book and read along. But no.
     React is new and books are getting older by the hour. You wouldnt get the newest features and advices from a book.
-    So that to do? - Search it up on the net. </div>
-    <p/>
-    And then the journey started
+    So that to do? - Search it up on the net.
+  
+    And then the journey started.
     
     <div>What is react? - It is something very different from what I thought at start</div> 
     

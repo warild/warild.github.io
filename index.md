@@ -8,7 +8,7 @@ At start I thoutht it would be straight easy. Just buy a book and read along. Bu
 
 And then the journey started
 
-** What is react?**
+** What is react? **
   - It is something very different from what I thought at start</div> 
 
 <p/>

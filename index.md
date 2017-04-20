@@ -18,10 +18,9 @@ The case is, React is only a part of a system. We need them other parts as well.
 
 ### Searching for a starting point
 React is part of a system. What kind of system are we talking of? How is the system made up and how are the parts related? 
+I ended up with the Single Page Application as the real starting point. 
 
 ### The Single Page Application - SPA
-I ended up here, with Single Page Application as the real starting point. 
-
 A Single Page Application is an application running in a single web-page. The page is dynamic and interactive 
 and JavaScript is used to make things happen there. With javaScript the layout is changed, data is fetched and 
 the user is navitated to new layouts whithin the same web-page.

@@ -6,11 +6,9 @@ So that to do? - Search it up on the net.
 
 And then the journey started
 
-**What is react?**
-  - It is something very different from what I thought at start</div> 
+**What is react?** - It is something very different from what I thought at start</div> 
 
-<p/>
-  Here are keypoints from my travel into learning React.
+Here are keypoints from my travel into learning React.
 
 <h3>React is not alone !</h3>
 Other names continued to pop-up as I was trying to find out what React really was. 

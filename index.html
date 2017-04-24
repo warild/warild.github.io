@@ -43,18 +43,30 @@ JavaScript is typeless and a script-language, making it easy to create unstrutur
 Therefore lots of tools are developed.
     
 <div class="title">SPA with React - The simplest application</div>
-The simplest page is a page that loads the React library, defines a React component and then exposes th component. I will support an example page later. This is the start of development with React.
+The simplest page is a page that loads the React library, defines a React component and then exposes the component. 
+    I will support an example page later. This is the start of development with React.
 <p/>
-But others have been down that same road, broaden it. And they share their works. Both tools and code are there for you to reuse. Now there are highways increasing the speed of development.
+But others have been down that same road, broaden it. And they share their works. 
+    Both tools and code are there for you to reuse. Now there are highways increasing the speed of development.
   
 <div class="title">On down the road</div>
-What we need first of all is a webserver to run our tests and develop against. Then we would like to have tools and access to libraries with ready_made code. And - of cause we need the environment where to develop.
+What we need first of all is a webserver to run our tests and develop against. 
+    Then we would like to have tools and access to libraries with ready_made code. 
+    And - of cause we need the environment where to develop.
 
 <div class="title">Node.js - our webserver</div>
-Node.js is a lightweight and efficient piece of code, serving our development needs. It runs our JavaScript code and shows the result in a browser. That is probably all we need to know by now, but one could notice that the effiency stems from the fact it runs in a single thread - and is non-blocking. This behavior is achieved by actively dispatching tasks - and having the tasks use callbacks when finished. The callbacks are collected in a queue and are then treated in order. You may also use Node to run your JavaScript-file. Just type: $ Node your_javascriptfile.js.
+Node.js is a lightweight and efficient piece of code, serving our development needs. 
+    It runs our JavaScript code and shows the result in a browser. That is probably all we need to know by now, 
+    but one could notice that the effiency stems from the fact it runs in a single thread - and is non-blocking. 
+    <p/>
+    This behavior is achieved by actively dispatching tasks - and having the tasks use callbacks when finished. 
+    The callbacks are collected in a queue and are then treated in order. 
+    <p/>
+    You may also use Node to run your JavaScript-file. Just type: $ Node your_javascriptfile.js.
 
 <div class="title">Node Package manager (NPM) - access to a repository with tons of ready made code</div>
-Code are shared - some half a million pices of code are shared. NPM takes your list of dependencies, which is written in the package.json-file, downloads those files and store them in the 'node_modules' folder. Then your code can import from this local library of javaScript-files.
+Code are shared - some half a million pices of code are shared. 
+    NPM takes your list of dependencies, which is written in the package.json-file, downloads those files and store them in the 'node_modules' folder. Then your code can import from this local library of javaScript-files.
 <p/>
 What the packages.jason-file looks like? Mainly a list of dependencies with version number - in the format of a JavaScript key-value list.
 <p/>

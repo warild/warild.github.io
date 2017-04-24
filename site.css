@@ -1,13 +1,15 @@
 body {
+  padding: 20px;
   font-family: "verdana";
   font-size: 11px;
   width: 700px;
-  border: 1px solid #f00;
 }
 .header{
+  padding: 5px;
   font-size: 20px;
 }
 
 .title{
+  padding: 5px;
   font-size: 14px;
 }

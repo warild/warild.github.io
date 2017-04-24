@@ -5,11 +5,11 @@ body {
   width: 700px;
 }
 .header{
-  padding: 5px;
+  padding-top: 10px;
   font-size: 20px;
 }
 
 .title{
-  padding: 5px;
+  padding-top: 5px;
   font-size: 14px;
 }

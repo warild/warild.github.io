@@ -1,11 +1,12 @@
 body {
   font-family:verdana;
-  width:700px;
+  font-size: 11px;
+  width: 700px;
 }
 .header{
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .title{
-  font-size: 10px;
+  font-size: 14px;
 }

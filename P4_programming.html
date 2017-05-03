@@ -46,8 +46,21 @@
   <p/>
   Benefits: Reuse of components. Hiding complexity. And more is to come.
   <p/>
-  This was a short intro to the way React takes your "html" written in JSX and turns it into ordinar html.
+  But there are more to note: In a multipage webapp the state is updated whenever a new page is requested or reloaded. 
+  Hence it is not necessary to pay spesific attention to the updating of data. Not so in a singlepage app. 
   <p/>
+  <b>State - what to do where when data changes</b><br/>
+  What should happen in the webapp when a change - like a mouseClick occurs? You will have to decide which values should
+  be updated and which components should be rendered. 
+  <p/>
+  To make a distinction between values that stay the same, and which properties are subject to changes react has two 
+  collections: this.props - for data that does not change, and this.state for data that changes.
+  <p/>
+  <b>Variables - maintaining state</b><br/>
+  <p/>
+  
+  <p/>
+  This was a short intro to the way React takes your "html" written in JSX and turns it into ordinar html.
   <b>CSS</b><br/>
   What about CSS? With LESS variables and functions are introduced, making it easy to reuse the same property in different 
   styles. How it looks?
@@ -55,11 +68,8 @@
   A css-variable is defined teh following way: @Var = "background: #fff;" or @White = "#ddd;" and is utilized the following 
   way: body {@var; border: @White}
   <p/>
-  <b>Routing - going to new pages within the SPA</b><br/>
   
-  <p/>
-  <b>Variables - maintaining state</b><br/>
-  
+  <b>Routing - going to new pages within the SPA</b><br/>  
   
 </body>
 </html

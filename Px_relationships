@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+	<head>
+        	<link rel="stylesheet" href="site.css">
+</head>
 <body>
   <h3>Unveiling relationships - React, JSX, Redux, Router and Less </h3>
     Less first. Less is CSS with the addition of variables, functions and others, adding a layer above CSS, 

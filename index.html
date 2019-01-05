@@ -1,90 +1,665 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="site.css">
-  </head>
-  <body>
-<div class="header">Learning React - a journey</div>
+<head>
+<style>
+.side{
+	display: flex;
+	flex-direction: column;
+	font-family: "Verdana";
+}
+.side-tittel{
+	font-size:2em;
+	font-family: "Lucida Sans";
+	margin-bottom:20px;
+	font-weight:bold;
+}
+.side-innhold{	
+}
+.artikkel{
+}
+.artikkel-tittel{
+	font-size:1.3em;
+	font-weight:bold;
+	margin:10px;
+}
+.artikkel-ingress{
+	font-size:1em;
+	margin:10px;
+	margin-right:40px;
+	min-width:400px;
+	max-width:800px;
+}
+.artikkel-innhold{
+	display: flex; 
+	flex-direction: row;
+	margin:5px;
+	border-bottom: 1px solid #ddd;
+}
+.artikkel-spalte{
+	width:50%;
+	min-width:400px;
+	max-width:600px;	
+	margin:10px;
+	font-size:12px;;
+}
+.title{
+	margin-top:10px;
+	font-weight:bold;
+	font-size:1em;
+}
+.command{
+	padding: 5px;
+	padding-left:10px;
+	font-style: italic;
+	font-size:1.2em;
+	xxborder: 1px solid red;
+}
+</style>
+</head>
 
-At start I thoutht it would be straight easy. Just buy a book and read along. But no. React is new and books are getting older by the hour. You wouldnt get the newest features and advices from a book. So that to do? - Search it up on the net.
-<p/>
-And then the journey started
-<div class="title">What is react?</div>
+<body>
 
-It is something very different from what I thought at start. Here are keypoints from my travel into learning React.
-React is not alone !
+<div class="side">
+	<div class="side-tittel">Learning React - a journey</div>	
+	<div class="side-innhold">	
+		<div class= "artikkel">		
+<div class="artikkel-tittel">What is React?</div>
+<div class="artikkel-ingress">
+At start I thought it would be straight easy. Just buy a book and read along. But no. 
+React is new and books are getting older by the hour. You wouldn't get the newest features and advices from a book. 
+And by the way, by reading a book you get all the answers lined up to you. You don't have to find the questions.
 <p/>
-Other names continued to pop-up as I was trying to find out what React really was. Names like Node, WebPack, Flux, Redux, MaterialUI etc. How much noise...
+So that to do? Search the net. Find the questions and find the answers.
 <p/>
-The case is, React is only a part of a system. We need them other parts as well.
-<div class="title">Searching for a starting point</div>
+And then the journey started.		
+</div>
+<div class="artikkel-innhold">
 
-React is part of a system. What kind of system are we talking of? How is the system made up and how are the parts related? I ended up with the Single Page Application as the real starting point.
-<div class="title">The Single Page Application - SPA</div>
+<div class="artikkel-spalte">
+	React is something very different from what I thought at start. One thing is for sure, React is not alone !
+	<p/>
+	Other names continued to pop-up as I was trying to find out what React really was. 
+	Names like Node, WebPack, Flux, Redux, Less, Sass, MaterialUI etc. How much noise...
+	<p/>
+	The case is, React is only a part of a system. We need other parts as well. 
+	And to see where React fits in we need to see the system as a whole.
+	
+	<div class="title">Searching for a starting point</div>
+	React is a part in a system. What kind of system are we talking of? How is the system made up and how are the parts related? 
+	I ended up with the Single Page Application as the real starting point.
+	
+	<div class="title">The Single Page Application - SPA</div>
+	A Single Page Application is an application running in a single web-page. 
+	The page is dynamic and interactive and JavaScript is used to make things happen there. 
+	With javaScript the layout is changed, data is fetched and the user is navigated to new layouts whithin the same web-page.
+	<p/>
+	Traditionally we have a client-server paradigm when it comes to web-applications. 
+	Here the task of the client is limited to display the pages created and sent by the server. 
+	Not so in the SPA case.
+	<p/>
+	With SPA we need to rethink this consept. 
+	Now the client holds the logic and it is the client that makes contact with servers and repos - and, yes, 
+	the application itself can make contact with more than one server or repo.
+	<p/>
+	As the application now resides in the client and not in the server, 
+	the application logic will have to be expressed in JavaScript.
+	And JavaScript is utilized so heavily that almost everything is JavaScript based. 
+	Rendering a new page? JavaScript. Css? JavaScript. Serverside-rendering? JavaScript. And tools? coded in JacaScript.
+	Why all JavaScript?
+	<p/>
+	With Javascript an additional layer is put above the traditional html, css and redirects. 
+	This extra layer gives flexibility and possibilities and simplifies coding. 
+	And this is where React belongs. React is a JavaScript library that extends the html layer. 	
+</div>
+<div class="artikkel-spalte">
+	You can do well without React and its friends, but you will do better with them.
+	<p/>
+	Should you know javaScript in advance, before learning React? yes - certainly. 
+	It will help to see the bigger picture when working in details, and it will help understanding why things are done in certain ways.
+	<p/>
+	There is one issue that might have come to your mind. What with links to pages? 
+	What if you want to let others reference certain places in your app? React takes care of this. 
+	<p/>
+	To others your one time downloaded, single page app will stand forth as a traditional webapplication.
+	
+	<div class="title">Benefits of using React</div>
+	When building web pages one easily ends up with html somewhere, css here and there and JavaScript scattered around. 
+	React helps you locate your code in components. This makes your code easy to reuse and easy to maintain.
+	<p/>
+	When updating and changing pages in a SPA the DOM (Document Object Model) needs to be updated - and rendered. This demands time and resources.
+	React creates its own (virtual) DOM where the needs of a SPA is focused. This gives quicker gui updates and simplifies development.
+	<p/>
+	When building web pages one will need appropriate tools. 
+	React has a powerful set of tools made for developing with React.
+	
+	<div class="title">What is the DOM (Document Object Model)</div>
+	A html-file consists from a tree-structure made up with tags. When it is rendered the content of the html-file is loaded into memory. 
+	One tag is presented by one node object.
+	This node-structure - which mirrors the html-file - is the DOM.
+</div>	
+</div>	
 
-A Single Page Application is an application running in a single web-page. 
-    The page is dynamic and interactive and JavaScript is used to make things happen there. 
-    With javaScript the layout is changed, data is fetched and the user is navigated to new layouts whithin the same web-page.
-<p/>
-Traditionally we have a client-server paradigm where the task of the client is to display the pages created and sent by the server. Not so in this case.
-<p/>
-With SPA we need to rethink this consept. Now the client holds the logic and it is the client that makes contact with servers and repos - and, yes, there can be more than one server and repo.
-<p/>
-The SPA relates so heavily on JavaScript that almost everything is JavaScript based. Serverside-rendering? JavaScript. Css? JavaScript. Presenting a new page? JavaScript. And tools? coded in JacaScript. Why all JavaScript?
-<p/>
-With javascript an additional layer is put above the traditional code. This extra layer gives flexibility and possibilities and simplifies coding. You can do well without React and its friends, but you will do better with them.
-<p/>
-Should you know javaScript in advance? yes - certainly. It will help to see the bigger picture when working in details, and it will help understanding why things are done in certain ways.
-<p/>
-There is one issue that might have come to your mind. What with links to pages? What if you want to let others reference certain places in your app? React takes care of this. To others your one time downloaded, single page app will stand forth as a traditional webapplication.
-<div class="title">Developing a Single Page Application</div>
+<div class= "artikkel">		
+	<div class="artikkel-tittel">What does React look like?</div>
+	<div class="artikkel-ingress">
+	First of all React is a layer on top of ordinary html. 	
+	<p/>
+	And the layer has an upper side interface. This upper side interface offers to create html by JavaScript. 
+	The layer itself is constructed by JavaScript so this is not too much of a surprise.
+	But the layer is after all an extension to html so the upper side also offers an interface 
+	for html.
+	<p/>	
+	And the layer has a downside interface. This interface connects the React layer to the ordinary html of an ordinary web page.
+	<p/>
+	And within the layer you find the virtual DOM. Lets look at how it all is implemented.
+	</div>
+	<div class="artikkel-innhold">
+	
+	<div class="artikkel-spalte">
 
-JavaScript is typeless and a script-language, making it easy to create unstrutured code - which we do not want - espesially as our application grows. Operations on the DOM are not that self-explaining, causing errors and debugging in JavaScript can be hard without support.
+	<div class="title">The React layer and the virtual DOM</div>
+	All html coded into the upper side interfaces are actually a React version of html. 
+	A 'div' is not a pure original html element. It is a 'div' that React will interpret.
+	This gives the possibility for React to act in between the React 'div' and a real 'div'.
+	<p/>
+	And this gives the basis to create the virtual DOM. 
+	The virtual DOM is then tied to the real DOM in smart ways that speeds the updating. 
+	<p/>
+	And in short this is the React layer we have been talking about.
+	<p/>
+	One should also notice that lexical differences exists between the React html and the real html.
+	<p/>
+	In ordinary html 'class' is used when it comes to CSS. 
+	But 'class' is a restricted keyword in JavaScript and will be misinterpreted.
+	The React solution to this is to use 'className' instead of 'class' in a CSS setting. 
+	<p/>
+	This is one example that shows that React html and real html are two sides of the React layer.
+	
+	<div class="title">Creating a html element with React</div>
+	Looking closely at html elements we will see that they consists from three parts:
+	a tag-name, attributes and finally some content. And nothing more.
+	The content, though may be text or a child element.
+	<p/>
+	A JavaScript method to create any html element then needs to take these three parts as parameters.	
+	<p/>
+	Done with React it may look like this:
+<pre>
+htmlElement = React.createElement('div', null, 'Content');
+</pre>	
+	'div' tells which html element React is to create. 
+	'null' tells React that no attributes are to be used.
+	And finally, the text 'Content' becomes the child element, which in this case obviously is textual, 
+	but could have been another React.createElement(..).
+	<p/>
+	This is a first glimpse of how a html element is created the JavaScript way with React.
+	<p/>
+	And now to the more interesting part - creating components.	
+	
+	<div class="title">Creating a React component</div>
+	The intention with a React component is to create a html element - with JavaScript. 
+	<p/>
+	And the best way to do so is to create a JavaScript class. 
+	Then the all features of a JavaScript class is available.
+	<p/>
+	But the question should rather be: What makes a JavaScript class a React component?
+	<p/>
+	The answer is that the class will have to contain a 'render' method which will return html code when called.
+	<p/>
+	And the class will have to have a constructor that takes a  properties object as a parameter. 
+	This object is called 'props' by React. 
+	This object will hold all parameters including child elements.
+	<p/>
+	Except from this the class may be used as any other class, 
+	containing any method needed to create the html to be returned when 'render' is called. 	
+	<p/>
+	In short a component returns html. 
+	And the html may also contain html generated by child components.
+	<p/>
+	A React component can be created in this way:
+	<pre>
+class MyReactComponent extends <i>React.Component</i> {
+  render() {
+    return<b>
+      &lt;h1&gt;
+        This is a React component
+      &lt;/h1&gt;</b>
+  }
+}</pre>
+	Here a React component is created by extending the React.component class.
+	It contains a 'render' method which returns the html of the component. 
+	
+	<div class="title">Using a React component - with the JavaScript interface</div>
+	As mentioned earlier there are two upper side interfaces available to use when creating html.
+	<p/>
+	A component looks just like an ordinary html tag and is used in the same way!
+	The only difference is the name  starts with a capital letter.
+	<p/>
+<pre>
+htmlElement = React.createElement(<b>MyReactComponent</b>, null, null);
+</pre>
+	As simple as this it is to use a component. 
+	The html returned by the render method is what the 'htmlElement' will consist from.
+	And the html element returned might be a hierarchy of html elements.
+
+	<div class="title">Using a React component - with the html interface - JSX</div>	
+	When using the html interface components are used in the same way as ordinary html.
+	This requires a transformation of the coded html into JavaScript - so that React can understand it.
+	<p/>
+	The use of this transformation is to use JSX.
+	<p/>
+	When using JSX a component might be created this way:
+<pre>
+&lt;div&gt;
+  <b>&lt;MyReactComponent/&gt;</b>
+&lt;/div&gt;
+</pre>
+When rendered the &lt;MyReactComponent/&gt; is replaced with the content of the MyReactComponent.
+The html code will in our case look like this:
+
+<pre>
+&lt;div&gt; <b>  
+  &lt;h1&gt;
+    This is a React component
+  &lt;/h1&gt;</b>
+&lt;/div&gt;  
+</pre>
+
+	<div class="title">Placing the component in a html page</div>	
+	To use the newly created component it must be placed into an ordinary html-page. 
+	To visualize imagine a simple html-page constructed like this:
+<pre>
+&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    An all ordinary html-page 
+    - with a tag having an id with a name:
+    &lt;<b>div id="react"</b>&gt;<i>
+    The html-content of the React component will be placed here</i>
+    <b>&lt;/div&gt;</b>
+  &lt;/body&gt;
+&lt;html&gt;
+</pre>
+	There is a method 'getElementId' in the real DOM object. 
+	This is used to find the element with the given id in the html-page. 
+	The React way to connect the virtual DOM to the real DOM looks like this:
+<pre>
+ReactDOM.render(&lt;MyReactComponent/&gt;, document.getElementById('react'));
+</pre>				
+	In this case it will get the element where id="react".
+	<p/>
+	React will then insert the component into the found element, 
+	replacing what might have been there earlier.
+
+	The resulting html-page might now look like this:
+		<pre>
+&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    An all ordinary html-page 
+    - with a tag having an id with a name:
+    &lt;<b>div id="react"&gt;
+      &lt;h1&gt;
+        This is a React component
+      &lt;/h1&gt;
+    &lt;/div&gt;</b>
+  &lt;/body&gt;
+&lt;html&gt;
+	</pre>	
+	
+	</div>	
+	<div class="artikkel-spalte">
+	<div class="title">A complete SPA within a single file</div>
+	A complete html file will have to contain React libraries for the creation of React components.
+	It will also need the library for the virtual DOM. 
+	And in the case JSX is used a library for this also is needed.
+	<p/>
+	The ordinary html has a div-element with id="react". 
+	Further a React component with the name 'MyComponent' is defined, 
+	and finally React places the component into the div-element in the ordinary html. 
+	<p/>
+<pre>&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset = "UTF-8"&gt;
+  &lt;title&gt;React with JSX&lt;/title&gt;<b>
+  &lt;script src="https://unpkg.com/react@16/umd/react.development.js">&lt;/script&gt;
+  &lt;script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"&gt;&lt;/script&gt;</b>
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h3&gt;A simple standalone React app with all included&lt;/h3&gt;
+   <b>&lt;div id="react"&gt;The React component goes here&lt;/div&gt;</b>
+ &lt;/body&gt;
+
+&lt;script type="text/babel"&gt;
+<b>class MyComponent extends React.Component {
+  render() {
+    return  &lt;div&gt;This is a React component with Jsx&lt;/div&gt;;
+  }
+}</b>
+<b>
+ReactDOM.render(&lt;MyComponent/&gt;, document.getElementById('react') );</b>
+&lt;/script&gt;
+&lt;/html&gt;
+</pre>	
+
+	<div class="title">Adding parameters to the component</div>
+	A component becomes more flexible if it can take parameters. 
+	Two components may then be of the same kind, 
+	but the content within may be adjusted for different use.
+	<p/>
+	A JSX component will look like any other html-element when it comes to parameters.
+	This is an example:
+<pre>
+&lt;MyReactComponent job="create" kind="amazing"/&gt;
+</pre>	
+	<p/>
+	The constructor has an object called 'props' as parameter.
+	This object holds all parameters and parameter values can be fetched from it by calls like 
+	'this.props.job' and by 'this.props.kind'.
+	<p/>
+	To tell a property is to be inserted into the content it is embraced by curly brackets.
+	Like this:
+<pre>
+class MyReactComponent extends <i>React.Component</i> {
+  render() {
+    return
+      &lt;h1&gt;
+        Please <b>{this.props.job}</b> something <b>{this.props.kind}</b>. 
+      &lt;/h1&gt;
+  }
+}</pre>
+	The final html will then look like this:
+<pre>
+  &lt;h1&gt;
+    <b>Please create something amazing</b> 
+  &lt;/h1&gt; 
+</pre>	
+	It must be emphasized that props are only to be used when creating new components.
+	Changing state is done as a separate task. More on this later.
+	
+	<div class="title">Inserting child components</div>
+	A component may contain another component. Look at the example below where 
+	'MyReactComponent' now has a child component.
+<pre>
+&lt;div&gt;
+  &lt;MyReactComponent&gt;
+    &lt;ChildComponent/&gt;    
+  &lt;/MyReactComponent&gt;
+&lt;/div&gt;
+</pre>	
+	How is a child component inserted into the MyReactComponent' component? 
+	After all the 'MyReactComponent' component might contain lots of html.
+	<p/>
+	The solution is pretty simple. Parameters are held in the 'props' object. 
+	And React uses this object to hold also the child components. 
+	The child component is found in 'props.children'. 
+	And this is used to insert the child component where wanted within the code
+	- in the same manner as with parameters.
+<pre>
+class MyReactComponent extends <i>React.Component</i> {
+  render() {
+    return<b>
+      &lt;h1&gt;
+        Child is inserted here: {this.props.children}
+      &lt;/h1&gt;</b>
+  }
+}</pre>
+	
+		
+	<div class="title">Alternative ways to create components</div>
+	A React component may be created in several ways: Hard-coded, by a function or by a class.
+	A React component that only will be used as constant might be created like this:
+	<p/>
+	You may see the class based React components created in one of the following two ways:
+<pre>
+- var MyComponent = <b>React.createClass</b>({...
+- class MyComponent extends <b>React.Component</b>{...
+- const MyComponent = () => { return ...
+</pre>	
+	</div>		
+</div>	
+</div>	
+<div class= "artikkel">		
+	<div class="artikkel-tittel">How to build an application with React?</div>
+	<div class="artikkel-ingress">
+	Before starting developing an application with React a suitable development environment must be considered. 
+	And luckily others have been there before - and done something about it.
+	<p/>
+	Good tools are available.
+	</div>
+
+	<div class="artikkel-innhold">
+	<div class="artikkel-spalte">			
+	<div class="title">Development environment on the web</div>
+	If you want to try out React right away, you may go to <a href="https://codepen.io/gaearon/pen/KgQpJd">codepen</a>. 
+	This is a web based tool that shows html, css, JavaScript and the final result in one single page.
+	<p/>	
+	Aother alternative is <a href="https://codesandbox.io/s/38q436q71q" target="_blank" >codesandbox</a> 
+
+	<div class="title">On down the road</div>
+	Development on the web might be easy when the application is small. 
+	But for a bigger application we need our own local development environment.
+	
+	<div class="title">Getting a local development environment</div>
+	What is needed first of all is a IDE where the code can be written.
+	Then it will be mandatory to have a web-server where a browser can find the developed files.
+	A browser for visualization, testing and debugging will also be necessary.
+	Also, it is necessary to have access to external libraries with code to utilize. 
+	And finally, some tool to build and deploy is needed.
+
+	<div class="title">Development - Atom</div>
+	Many tools for developing frontend code exists. Atom is one. 
+	It is made for frontend development, its free, good and very popular.
+	
+	Atom is a good starting point for frontend developing with React.
+
+	<div class="title">Webserver - Node.js</div>
+	Node.js is a lightweight and efficient webserver, serving our development needs. 
+	It typically listens to port 3000 and can be reached from a browser using an address like: http://localhost:3000/react_app. 		
+	Node.js may also run JavaScript-files directly. Just type: 
+<pre>
+$ Node your_javascriptfile.js.
+</pre>
+	The html-instructions in the file will then be used to generate a web page.
+</div>
+<div class="artikkel-spalte">
+	That is probably all we need to know by now, 
+	but one could notice that the effiency of Node.js stems from the fact it runs in a single thread - and is non-blocking. 
+	This behavior is achieved by actively dispatching tasks - and having the tasks use callbacks when finished. 
+	The callbacks are collected in a queue and are then treated in order. 
+
+	<div class="title">Visualization and debugging - Chrome with plugins</div>
+	Atom might be good for writing the code, but to visualise the code we need a browser. 
+	And in the browser dreams get distinguished from reality. 
+	Or more precisely spoken - it is in the browser we see design errors. 
+
+	<div class="title">Repository with libraries - Node Package Manager (NPM)</div>
+	Chrome is nice to use for visualization when developing and for debugging.
+	<p/>			
+	Code are shared - some half a million pices of code are shared. 
+	NPM takes your list of dependencies, which is written in the package.json-file, 
+	downloads those files and store them in the 'node_modules' folder in your project. 
+	Then your code can import code from this local library of javaScript-files.
+	<p/>
+	Libraries to enter into the packages.json can be found by searching https://www.npmjs.com/package/react.
+
+	<div class="title">Packing and deploying - Webpack</div>
+	Both imported libraries and your own code will end up in the final application. 
+	Webpack is on the job putting it all together in one single final file: bundle.js.
+	This file is uploaded to the web-server along with other necessary files and 
+	by this made available to web-clients all over the world.
+<p/>	
+	Brunch might be an alternative here. 
+	
+	</div>	
+</div>
+<div class= "artikkel">		
+	<div class="artikkel-tittel">Up running - getting a React environment</div>
+	<div class="artikkel-ingress">
+	This section is about installing Atom, Node, Chrome plugins, NPM and Webpack and getting to a position where we are ready to
+    start developing web-pages with React. Complicated? - no - not at all. 
+	</div>
+	<div class="artikkel-innhold">
+	<div class="artikkel-spalte">	
+
+	<div class="title">Installing Atom</div>
+    Install... and that should be it: <a href= "https://atom.io/" target="_blank">Atom IDE</a>
+	
+    <div class="title">Installing Node and NPM</div>
+    NPM is actually installed along with Node. Therefore go and have both installed: 
+    <a href= "https://nodejs.org/en/" target="_blank"> NodeJS + NPM</a>
+   
+    <div class="title">Installing plugin for Chrome</div>
+    Go to <a href= "https://chrome.google.com/webstore/category/extensions" target="_blank">Chrome Webstore</a>  
+    Search for 'React Developer Tools'. And then 'Add'.	
+	</div>	
+	
+	<div class="artikkel-spalte">			
+    <div class="title">Installing Webpack</div>
+    Webpack is downloaded with NPM, so it is necessary to do an exercise with NPM first.
+	But take a look at this <a href="https://webpack.js.org/guides/installation/">Webpack installation guide</a>. 
+	The installation should be finished in 3-4 command lines.
+	<p/> 
+	And that should be it.
+	</div>	
+</div>	
+</div>	
+<div class= "artikkel">		
+	<div class="artikkel-tittel">The folder structure of a React project</div>
+	<div class="artikkel-ingress">
+	When the environment is in place and the coding about to start, the question on where to place files arises. 
+	Some structure is needed, but no structure is predefined for React-projects.
+	<p/>
+	One approach is to simply locate all code and all needs in a single file. This is a simple approach. 
+	Another approach is to create a folder-structure by yourself. That puts you on your own.
+	A third approach is to use a template to define the folder structure. 
+	</div>
+	<div class="artikkel-innhold">
+	<div class="artikkel-spalte">	
+	<div class="title">1: The single file approach</div>
+	Done this way the browser traverses the file and finds instructions to fetch the React-library from a Facebook location. 
+	Then the React-code in the file is transformed into JavaScript that is understandable to the browser. Finally the browser 
+	renders this transformed code and the page is shown to the user. 
+	<p/>
+	This is only for very simple applications. It quickly gets complicated when the application grows.
+	
+	<div class="title">2: The on your own approach</div>
+	This approach gives you the freedom to chose structure yourself - and change it underways as you reach new insights.
+	<p/>
+	It seems a structure like this might scale well:<br/>
+<pre>
+  reactProject/index.htm (holding the app)
+  reactProject/components (parts of pages)
+  reactProject/pages (pages)
+</pre>
+	Subfolders of '/pages' will hold pages resembling the app:
+<pre>
+  reactProject/pages/Home (home-page)
+  reactProject/pages/AboutUs (aboutUs-page)
+</pre>
+
+	<div class="title">3: The template approach</div>
+	Someone has been down this road before, making the 'create-react-app' package. By running this a readymade startup 
+	project is created. And you just continue your work based on this. How to install and run?
+	<p/>
+	1: Download the template project named 'create-react-app' with npm by running this command:
+	<div class="command">npm install -g create-react-app</div>
+	2: Go to the folder where you want the folder of the project created, and then issue this command (with the name of the new project):<br/>
+	<div class="command">create-react-app name_of_the_new_project </div>
+</div>	
+<div class="artikkel-spalte">	
+	The folder-structure created will look like this:
+<pre>
+  reactProject/public/index.htm (holding the app)
+  reactProject/src/index.js	
+  ...
+</pre>
+	In /public/ goes everything that should be publicly exposed by the webserver. <br/>
+	In /src/ goes all other code that resembles the application. Subfolders might hold the individual pages.
 <p/>
-Therefore lots of tools are developed.
-    
-<div class="title">SPA with React - The simplest application</div>
-The simplest page is a page that loads the React library, defines a React component and then exposes the component. 
-    I will support an example page later. This is the start of development with React.
-<p/>
-But others have been down that same road, broaden it. And they share their works. 
-    Both tools and code are there for you to reuse. Now there are highways increasing the speed of development.
+	There are things of importance to notice with this approach: <br/>
+	The index.html must always exist, and it must always be placed in the 'public' -folder. 
+	The file 'index.js' must also exist, and it must always be placed in the 'src'-folder. 
+	This is because the system uses this index.html to start the app and always 
+	inspects this index.js for the content of the app. 
+	<p/>
+	This presumption is the (minor) drawback of this approach. Single command is the (mayor) benefit.
+
+	<div class="title">Running the template</div>
+	The folder structure is in place and create-react-app has also provided files to run an app.
+	To run the app take the following steps:
+	<p/>
+	3: Go into the folder with the new project, and the issue this command to start the web-server:
+	<div class="command">npm start</div>
+
+	4: Open a browser and go to this address:	
+	<div class="command">http://localhost:3000/name_of_the_new_project</div>
+
+	The template web-page should now show in the browser.
+	<p/>
+	With this approach we have an application up and running and can elaborate on it.
+</div>		
+
+</div>	
+</div>    
+<div class= "artikkel">		
+	<div class="artikkel-tittel">More on programming with React</div>
+	<div class="artikkel-ingress">
+	First a view at a distance. 
+	<p/>
+	With React we add a layer above the traditional content of html-files. The added layer consists from JavaScript. 
+	This means that all html is controlled by JavaScript. The CSS is controlled by JavaScript, the data is controlled by JavaScript
+	and the actions and events are controlled by JavaScript. 
+	<p/>
+	With a programming language as an added layer we get possibilities like reuse of own code and code made by others, encaptulation of (complicated) code, 
+	and structures like variables, functions and classes.
+	<p/>
+	In other words: By adding a layer of coding we get more freedom when creating dynamic web-applications!
+</div> 
+<div class="artikkel-innhold">
+<div class="artikkel-spalte">
+
+
+
+  <div class="title">Libraries - how to download, install and use</div>
+  Coming up..
   
-<div class="title">On down the road</div>
-What we need first of all is a webserver to run our tests and develop against. 
-    Then we would like to have tools and access to libraries with ready_made code. 
-    And - of cause we need the environment where to develop.
+  <div class="title">Routing - going to new pages within the SPA</div>
+  Coming up..
+  
+  <div class="title">State - what to do where when data changes</div>
+  In a traditional multipage web application the state is updated whenever a new page is requested or reloaded. 
+  Hence it is not necessary to pay specific attention to the updating of data. 
+  Not so in a SPA. 
+  <p/>
+  What should happen in the SPA when a dataset is received after a mouseClick? 
+  You will have to decide which values should be updated and which components should be rendered.
+  
+  <p/>
+  To make a distinction between values that stay the same, 
+  and which properties are subject to changes the React class has two collections: 
+  this.props - for data to use in the creation of a component, 
+  and this.state - for data that changes within components.
+</div>
 
-<div class="title">Node.js - our webserver</div>
-Node.js is a lightweight and efficient piece of code, serving our development needs. 
-    It runs our JavaScript code and shows the result in a browser. That is probably all we need to know by now, 
-    but one could notice that the effiency stems from the fact it runs in a single thread - and is non-blocking. 
-    <p/>
-    This behavior is achieved by actively dispatching tasks - and having the tasks use callbacks when finished. 
-    The callbacks are collected in a queue and are then treated in order. 
-    <p/>
-    You may also use Node to run your JavaScript-file. Just type: $ Node your_javascriptfile.js.
+  <div class="artikkel-spalte">  
+  <div class="title">CSS - using variables and functions</div>
+  What about CSS? What about LESS?
+  <p/>
+  With LESS variables and functions are introduced, making it easy to reuse the same property in different 
+  styles. How it looks?
+  <p/>
+  Css-variables are defined the following way:
+<pre>
+  @Var = "background: #fff;"
+  @White = "#ddd;"
+</pre>  
+  And can be used the following way: 
+<pre>
+  body {@var; border: @White}
+</pre>  
+	<p/>
+	Or what about <a href="https://postcss.org/"> PostCSS</a>
+</div>
+</body>
 
-<div class="title">Node Package Manager (NPM) - access to a repository with tons of ready made code</div>
-Code are shared - some half a million pices of code are shared. 
-    NPM takes your list of dependencies, which is written in the package.json-file, downloads those files and store them in the 'node_modules' folder. Then your code can import from this local library of javaScript-files.
-<p/>
-What the packages.jason-file looks like? Mainly a list of dependencies with version number - in the format of a JavaScript key-value list.
-<p/>
-Now we have the server and the tool to download code.
-
-<div class="title">Atom - development environment</div>
-Many tools for developing frontend code exists. Atom is one. It is made for frontend development, its free, good and very popular.
-<p/>
-Atom is a good starting point for frontend developing with React.
-    
-<div class="title">Development and debugging - Chrome with plugins</div>
-Atom might be good for writing the code, but to visualise the code we need a browser. 
-    And in the browser dreams get distinguished from reality. 
-    Or more precisely spoken - it is in the browser we see design errors. Chrome has plugins that is nice to use for this task.
-
-<div class="title">Webpack - packing all codepieces together into one SPA</div>
-Both imported code and your own code will end up in the final application. How? Webpack is on the job putting it all together in one single final file: bundle.js.
-<p/>
---- And this ends the first read through ---
-<p/>
-Next step will be to <a href="P2_setup.html">set up an environment </a>
+</html>

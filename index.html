@@ -672,35 +672,76 @@ $ Node your_javascriptfile.js.
 <div class="artikkel-innhold">
 <div class="artikkel-spalte">
   <div class="title">On the various components</div>
-  A React-component always -always- return html-code. That is the purpose of the component. 
+  A React-component will always -always- return html-code. That is the purpose of the component. 
 	<p/>
-	The simplest component is a functional component. It will only handle props. It will not handle state or other lifecycle actions.
+	The simplest component is a functional component. It will only take props as parameter. Not state and not respond to lifecycle events.
 	<p/>
-	A class component covers 
+	A functional component may look like this:
 <pre>
-class Car extends React.Component {
+function SomeComponent() {
+  return <h2>Yes, I am returning html</h2>;
+}
+</pre>
+	<p/>
+	A class component covers all possible parameters and lifecycle events.
+	<p/>
+	A class component may look like this:
+<pre>
+class SomeComponent extends React.Component {
   render() {
     return <h2>Yes, I am returning html</h2>;
   }
 }
 </pre>
-	<p>
-The same as a functional component:
+	<p/>
+	A component may also be created using functional programming. This has the same features as a class component 
+	(- functional code is after all contained in an anonymous classes).
 <pre>
-function Car() {
+const SomeComponent=()=> {
   return <h2>Yes, I am returning html</h2>;
 }
 </pre>
-After the introduction of React Hooks, writing functional components has become the ​standard way of writing React components in modern applications.
+	<p/>
+	Creating components using React hooks.
+After the introduction of React Hooks, writing functional components has become the standard way of writing React components in modern applications.
   
   <div class="title">On the React-component parameters</div>
   Coming up..
   
-  <div class="title">props - constants to use when the component is created</div>	
-  <div class="title">state - changing what you see</div>
-  <div class="title">child - putting sub-components in the right place</div> 
+  <div class="title">Updating components - props vs state</div>
+	A component may have some of its content updated. In this case an event occurs and you shold use state to update component-internal values.
+	A parent component may also need to update a child. In this case let the parent component use props when updating (creating) the child.
+	In general data should float downwards, but in the case a child needs to update its parent, a way to accomplish this is to have a global 
+	event that the parent listens to and that che child may call. Callback functions may be passed in as props.
+	<p/>
+	Subscribe to events in componentDidMount(), unsubscribe in componentWillUnmount(), and call setState() when you receive an event.
+	<p/>
+	Let .render() take care of the rendering. Use state just to tell which dataset is now to be rendered.
+	<p/>
+	State is the local state of the component and cannot be accessed and modified from outside of the component. 
+	It's equivalent to local variables in a function.
+	<p/>	
+	Props make components reusable as components may receive data from their parent component. They are equivalent to function parameters
+
 </div>
+	</div>
 	
+	
+	
+	
+	<div class= "artikkel">		
+	<div class="artikkel-tittel">React-hooks</div>
+	<div class="artikkel-ingress">
+	Using functional programming, and state and other events to all have names starting with 'use'. I.e. useState, useEffect
+	<p/>
+	
+	
+</div> 
+<div class="artikkel-innhold">
+<div class="artikkel-spalte">
+	
+</div> 
+</div> 
 	
 </body>
 

@@ -672,7 +672,26 @@ $ Node your_javascriptfile.js.
 <div class="artikkel-innhold">
 <div class="artikkel-spalte">
   <div class="title">On the various components</div>
-  Coming up..
+  A React-component always -always- return html-code. That is the purpose of the component. 
+	<p/>
+	The simplest component is a functional component. It will only handle props. It will not handle state or other lifecycle actions.
+	<p/>
+	A class component covers 
+<pre>
+class Car extends React.Component {
+  render() {
+    return <h2>Yes, I am returning html</h2>;
+  }
+}
+</pre>
+	<p>
+The same as a functional component:
+<pre>
+function Car() {
+  return <h2>Yes, I am returning html</h2>;
+}
+</pre>
+After the introduction of React Hooks, writing functional components has become the ​standard way of writing React components in modern applications.
   
   <div class="title">On the React-component parameters</div>
   Coming up..
